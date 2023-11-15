@@ -26,6 +26,7 @@ class App {
         this.scene.add(ambient);
 
         this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+
         this.renderer.setPixelRatio(window.devicePixelRatio);
         this.renderer.setSize(window.innerWidth, window.innerHeight);
         this.renderer.outputEncoding = THREE.sRGBEncoding;
@@ -79,7 +80,11 @@ class App {
 
     setEnvironment() {
         // Create a new RGBELoader instance
-        const hdrLoader = new RGBELoader();
+        hdrLoader.load('venice_sunset_1k.hdr', function (texture) {
+            // Ensure this callback is being called
+            console.log('HDR image loaded:', texture);
+            // ... rest of your code
+        });
         // Set data type
         hdrLoader.setDataType(THREE.UnsignedByteType);
         // Set the path to the HDR images
