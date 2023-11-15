@@ -1,8 +1,9 @@
 import * as THREE from "./libs/three125/three.module.js";
-import { GLTFLoader } from '../libs/three/jsm/GLTFLoader.js';
-import { RGBELoader } from '../libs/three/jsm/RGBELoader.js';
-import { ARButton } from '../libs/three/ARButton.js';
-import { LoadingBar } from '../libs/LoadingBar.js';
+import { GLTFLoader } from '/AR/libs/three/jsm/GLTFLoader.js';
+import { RGBELoader } from '/AR/libs/three/jsm/RGBELoader.js';
+import { ARButton } from '/AR/libs/three/ARButton.js';
+import { LoadingBar } from '/AR/libs/LoadingBar.js';
+
 
 
 class App{
