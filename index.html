@@ -123,47 +123,53 @@
                 </h4>
                 <h5>Rs.100</h5>
                 <p class="card-text">Amur...Have a Nice one Butter Chiken Habibi with plate of Rice</p>
-                 <style>
-                  /* Styles for the lightbox overlay */
-                  #lightbox {
-                    display: none;
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background: rgba(0, 0, 0, 0.8);
-                    justify-content: center;
-                    align-items: center;
-                    z-index: 1000;
-                  }
-              
-                  #lightbox img {
-                    max-width: 90%;
-                    max-height: 90%;
-                  }
-              
-                  #close-btn {
-                    position: absolute;
-                    top: 10px;
-                    right: 10px;
-                    cursor: pointer;
-                    color: white;
-                    font-size: 20px;
-                  }
-                </style>
-              </head>
-              <body>
-              
-              <!-- Small Image -->
-              <img src="../../assets/ar-shop/chair1.jpg" alt="" onclick="openLightbox()">
-              
-              <!-- Lightbox Overlay -->
-              <div id="lightbox">
-                <div id="close-btn" onclick="closeLightbox()">X</div>
-                
-                <!-- Embedded Website -->
-                <iframe src="https://mywebar.com/p/Project_1_7i42fh17ij" width="340" height="600" allow="camera; accelerometer; vr" > Your browser does not support embedded content </iframe>
+                <style>
+    /* Styles for the small image */
+    #smallImage {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Small Image -->
+ <a href="#"><img class="card-img-top" src="./assets/ar-shop/chair1.jpg" alt=""> onclick="openImageAndWebsite()"</a>
+
+<script>
+  function openImageAndWebsite() {
+    // Open a new window or tab with a larger image and an embedded website
+    const newWindow = window.open('', '_blank');
+    newWindow.document.write(`
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Large Image and Website Viewer</title>
+        <style>
+          /* Styles for the large image */
+          body {
+            margin: 0;
+            overflow: hidden;
+          }
+          img {
+            width: 100vw;
+            height: 100vh;
+            object-fit: contain;
+          }
+        </style>
+      </head>
+      <body>
+        <!-- Larger Image -->
+        <img src="large-image.jpg" alt="Large Image">
+        <!-- Embedded Website -->
+       <iframe src="https://mywebar.com/p/Project_1_7i42fh17ij" width="340" height="600" allow="camera; accelerometer; vr" > Your browser does not support embedded content </iframe>
+      </body>
+      </html>
+    `);
+  }
+</script>
+
              
               </div>
               <div class="card-footer">
