@@ -124,14 +124,47 @@
                 <h5>Rs.100</h5>
                 <p class="card-text">Amur...Have a Nice one Butter Chiken Habibi with plate of Rice</p>
                  <style>
-                  body {
-                    text-align: right;
+                  /* Styles for the lightbox overlay */
+                  #lightbox {
+                    display: none;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.8);
+                    justify-content: center;
+                    align-items: center;
+                    z-index: 1000;
+                  }
+              
+                  #lightbox img {
+                    max-width: 90%;
+                    max-height: 90%;
+                  }
+              
+                  #close-btn {
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    cursor: pointer;
+                    color: white;
+                    font-size: 20px;
                   }
                 </style>
               </head>
               <body>
               
-              <iframe src="https://mywebar.com/p/Project_1_7i42fh17ij" width="50" height="50" allow="camera; accelerometer; vr"></iframe>
+              <!-- Small Image -->
+              <img src="../../assets/ar-shop/chair1.jpg" alt="" onclick="openLightbox()">
+              
+              <!-- Lightbox Overlay -->
+              <div id="lightbox">
+                <div id="close-btn" onclick="closeLightbox()">X</div>
+                
+                <!-- Embedded Website -->
+                <iframe src="https://mywebar.com/p/Project_1_7i42fh17ij" width="340" height="600" allow="camera; accelerometer; vr" > Your browser does not support embedded content </iframe>
+             
               </div>
               <div class="card-footer">
                 <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
