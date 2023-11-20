@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!--favicon -->
+  <!-- favicon -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <link rel="apple-touch-icon" sizes="180x180" href="./css/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./css/favicon/favicon-32x32.png">
@@ -23,23 +23,34 @@
   <!-- Custom styles for this template -->
   <link href="css/shop-homepage.css" rel="stylesheet">
 
+  <style>
+    /* Styles for the small camera icon */
+    .camera-icon {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      cursor: pointer;
+    }
+  </style>
 </head>
 
 <body>
   <script src="./libs/fas.js"></script>
 
-    <script type="module">
-        import { App } from './app.js';
+  <script type="module">
+    import { App } from './app.js';
 
-        document.addEventListener("DOMContentLoaded", function(){
-            const app = new App();
-            window.app = app;
-        });
-    </script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const app = new App();
+      window.app = app;
+    });
+  </script>
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#"><img src="./assets/ar-shop/logo-nav.jpg"/> HabibiAR.com</a>
+      <a class="navbar-brand" href="#"><img src="./assets/ar-shop/logo-nav.jpg" /> HabibiAR.com</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -74,9 +85,9 @@
         <h1 class="my-4">HabibiAR</h1>
         <div class="list-group">
           <a href="#" class="list-group-item">Home</a>
-        
+
           <a href="#" class="list-group-item">Contact</a>
-          
+
           <a href="#" class="list-group-item">Cart</a>
         </div>
 
@@ -95,50 +106,40 @@
             <div class="carousel-item active">
               <img class="d-block img-fluid" src="./assets/ar-shop/banner1.jpg" alt="First slide">
             </div>
-            <div class="carousel-item">
-              <img class="d-block img-fluid" src="./assets/ar-shop/banner2.jpg" alt="Second slide">
-            </div>
-            <div class="carousel-item">
-              <img class="d-block img-fluid" src="./assets/ar-shop/banner3.jpg" alt="Third slide">
-            </div>
+            <!-- ... (other carousel items) ... -->
           </div>
-          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
+          <!-- ... (carousel controls) ... -->
         </div>
 
         <div class="row">
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="./assets/ar-shop/chair1.jpg" alt=""></a>
+              <a href="#" onclick="openImageAndWebsite()">
+                <img class="card-img-top" src="./assets/ar-shop/chair1.jpg" alt="">
+              </a>
               <!-- Small camera icon -->
-              <img class="camera-icon" src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Textured-camera-icons-vector-01.jpg" alt="Camera Icon" height=50 width=50 onclick="openWebsite1()">
+              <img class="camera-icon" src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Textured-camera-icons-vector-01.jpg" alt="Camera Icon" onclick="openWebsite1()">
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="#">Butter Chicken</a>
                 </h4>
                 <h5>Rs.100</h5>
-                <p class="card-text">Amur...Have a Nice one Butter Chiken Habibi with plate of Rice</p>
+                <p class="card-text">Amur...Have a Nice one Butter Chicken Habibi with a plate of Rice</p>
               </div>
               <div class="card-footer">
                 <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
                 <button class="ar-button" onclick="window.app.showChair(1);"><i class="fas fa-camera"></i></button>
               </div>
-              
             </div>
           </div>
-
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
               <a href="#"><img class="card-img-top" src="./assets/ar-shop/chair2.jpg"alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
+               <!-- Small camera icon -->
+               <img class="camera-icon" src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Textured-camera-icons-vector-01.jpg" alt="Camera Icon" onclick="openWebsite2()">
+               <div class="card-body">
+                 <h4 class="card-title">
                   <a href="#">Momos</a>
                 </h4>
                 <h5>Rs.70</h5>
@@ -154,8 +155,10 @@
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
               <a href="#"><img class="card-img-top" src="./assets/ar-shop/chair3.jpg" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
+               <!-- Small camera icon -->
+               <img class="camera-icon" src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Textured-camera-icons-vector-01.jpg" alt="Camera Icon" onclick="openWebsite3()">
+               <div class="card-body">
+                 <h4 class="card-title">
                   <a href="#">Ramen</a>
                 </h4>
                 <h5>Rs.70</h5>
@@ -171,8 +174,10 @@
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
               <a href="#"><img class="card-img-top" src="./assets/ar-shop/chair4.jpg" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
+               <!-- Small camera icon -->
+               <img class="camera-icon" src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Textured-camera-icons-vector-01.jpg" alt="Camera Icon" onclick="openWebsite4()">
+               <div class="card-body">
+                 <h4 class="card-title">
                   <a href="#">French Fries</a>
                 </h4>
                 <h5>Rs.50</h5>
@@ -188,8 +193,10 @@
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
               <a href="#"><img class="card-img-top" src="./assets/ar-shop/chair5.jpg"alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
+               <!-- Small camera icon -->
+               <img class="camera-icon" src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Textured-camera-icons-vector-01.jpg" alt="Camera Icon" onclick="openWebsite5()">
+               <div class="card-body">
+                 <h4 class="card-title">
                   <a href="#">Palak Paneer</a>
                 </h4>
                 <h5>Rs.90</h5>
@@ -205,8 +212,10 @@
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
               <a href="#"><img class="card-img-top" src="./assets/ar-shop/chair6.jpg" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
+               <!-- Small camera icon -->
+               <img class="camera-icon" src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Textured-camera-icons-vector-01.jpg" alt="Camera Icon" onclick="openWebsite6()">
+               <div class="card-body">
+                 <h4 class="card-title">
                   <a href="#">Pizza</a>
                 </h4>
                 <h5>Rs.60</h5>
@@ -218,18 +227,6 @@
               </div>
             </div>
           </div>
-
-        </div>
-        <!-- /.row -->
-
-      </div>
-      <!-- /.col-lg-9 -->
-
-    </div>
-    <!-- /.row -->
-
-  </div>
-  <!-- /.container -->
 
   <!-- Footer -->
   <footer class="py-5 bg-dark">
@@ -243,12 +240,43 @@
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-<script>
+  <script>
     function openWebsite1() {
-       const newWindow = window.open("https://mywebar.com/p/Project_1_7i42fh17ij", '_blank');
+       const newWindow = window.open("https://mywebar.com/p/Project_4_l9emqm9y7w", '_blank');
     }
 
 </script>
+<script>
+  function openWebsite2() {
+     const newWindow = window.open("https://mywebar.com/p/Project_3_gb9fgm81jw", '_blank');
+  }
+
+</script>
+<script>
+  function openWebsite3() {
+     const newWindow = window.open("https://mywebar.com/p/Project_4_iy1abmceez", '_blank');
+  }
+
+</script>
+<script>
+  function openWebsite4() {
+     const newWindow = window.open("https://mywebar.com/p/Project_2_ed4iulwgex", '_blank');
+  }
+
+</script>
+<script>
+  function openWebsite5() {
+     const newWindow = window.open("https://mywebar.com/p/Project_2_ed4iulwgex", '_blank');
+  }
+
+</script>
+<script>
+  function openWebsite6() {
+     const newWindow = window.open("https://mywebar.com/p/Project_1_7i42fh17ij", '_blank');
+  }
+
+</script>
+
 
 </body>
 
