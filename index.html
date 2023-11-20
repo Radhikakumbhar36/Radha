@@ -117,60 +117,14 @@
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
               <a href="#"><img class="card-img-top" src="./assets/ar-shop/chair1.jpg" alt=""></a>
+              <!-- Small camera icon -->
+              <img class="camera-icon" src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Textured-camera-icons-vector-01.jpg" alt="Camera Icon" onclick="openWebsite1()">
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="#">Butter Chicken</a>
                 </h4>
                 <h5>Rs.100</h5>
                 <p class="card-text">Amur...Have a Nice one Butter Chiken Habibi with plate of Rice</p>
-                <style>
-    /* Styles for the small image */
-    #smallImage {
-      cursor: pointer;
-    }
-  </style>
-</head>
-<body>
-
-<!-- Small Image -->
- <a href="#"><img class="card-img-top" src="./assets/ar-shop/chair1.jpg" alt=""> onclick="openImageAndWebsite()"</a>
-
-<script>
-  function openImageAndWebsite() {
-    // Open a new window or tab with a larger image and an embedded website
-    const newWindow = window.open('', '_blank');
-    newWindow.document.write(`
-      <!DOCTYPE html>
-      <html lang="en">
-      <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Large Image and Website Viewer</title>
-        <style>
-          /* Styles for the large image */
-          body {
-            margin: 0;
-            overflow: hidden;
-          }
-          img {
-            width: 100vw;
-            height: 100vh;
-            object-fit: contain;
-          }
-        </style>
-      </head>
-      <body>
-        <!-- Larger Image -->
-        <img src="large-image.jpg" alt="Large Image">
-        <!-- Embedded Website -->
-       <iframe src="https://mywebar.com/p/Project_1_7i42fh17ij" width="340" height="600" allow="camera; accelerometer; vr" > Your browser does not support embedded content </iframe>
-      </body>
-      </html>
-    `);
-  }
-</script>
-
-             
               </div>
               <div class="card-footer">
                 <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
@@ -288,6 +242,13 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function openWebsite1() {
+      // Open a new window or tab and navigate to the Webar website
+      window.open("https://mywebar.com/p/Project_1_7i42fh17ij", '_blank');
+    }
+  </script>
 
 </body>
 
